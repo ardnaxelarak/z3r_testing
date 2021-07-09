@@ -5,6 +5,12 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
+if [[ "$OSTYPE" == "msys" ]]; then
+	COMMAND=asar.exe
+else
+	COMMAND=../z3randomizer/asar
+fi
+
 PATCHES=("no_flash.asm" "quickswap.asm")
 DEFINES=()
 for var in "$@"; do
@@ -23,5 +29,5 @@ OUTPUT="${OUTPUT:-output/quickswap.sfc}"
 
 cp ../working.sfc $OUTPUT
 for var in ${PATCHES[@]}; do
-	../z3randomizer/asar $DEFINES $var $OUTPUT
+	$COMMAND $DEFINES $var $OUTPUT
 done

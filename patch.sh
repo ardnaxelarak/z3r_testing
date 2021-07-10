@@ -1,10 +1,5 @@
 set -e
 
-if [ -z "$1" ]; then
-  echo "USAGE: patch.sh asm_file [asm_file, ...]"
-  exit 1
-fi
-
 if [[ "$OSTYPE" == "msys" ]]; then
 	COMMAND=asar.exe
 else
@@ -22,6 +17,7 @@ for var in "$@"; do
 		PATCHES+=($var)
 	else
 		echo file \"$var\" not found
+		echo "USAGE: patch.sh [asm_file, ...]"
 		exit 1
 	fi
 done

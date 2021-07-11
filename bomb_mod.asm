@@ -15,23 +15,23 @@ db #$47 ; ProgressiveSwordReplacement ($47 = 20 Rupees)
 org $30802F ; PC 0x18002F
 db #$01 ; SpecialBombs
 ;--------------------------------------------------------------------------------
+org $308034
+db #00 ; starting max bombs = 0
+;--------------------------------------------------------------------------------
 org $308028 ; PC 0x180028
-db #$B5 ; FairySword
+db #$B4 ; FairySword
 
 org $0589B0 ; PC 0x289B0 ; sprite_master_sword.asm : 179
-db #$B5 ; PedestalSword
+db #$B2 ; PedestalSword
 
 org $05DF45 ; PC 0x2DF45
-db #$B5 ; Uncle
+db #$B1 ; Uncle
 
 org $30802A ; PC 0x180029 - 0x18002A
-db #$B5 ; SmithItem
+db #$B3 ; SmithItem
 
 org $06B55C ; PC 0x3355C ; sprite_smithy_bros.asm : 634
-db #$B5 ; SmithSword
-;--------------------------------------------------------------------------------
-org $30804D
-db #$22 ; always infinite bombs
+db #$B3 ; SmithSword
 ;--------------------------------------------------------------------------------
 org $068051
 db #$DB ; fish merchant 10-bomb drop -> red rupee

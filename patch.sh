@@ -6,7 +6,7 @@ else
 	COMMAND=../z3randomizer/asar
 fi
 
-PATCHES=("quickswap.asm" "no_flash.asm" "nomusic.asm")
+PATCHES=("quickswap.asm" "no_flash.asm" "nomusic.asm" "aga_fix.asm")
 DEFINES=()
 for var in "$@"; do
 	if [[ $var = --* ]]; then

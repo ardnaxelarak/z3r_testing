@@ -1,3 +1,4 @@
+;--------------------------------------------------------------------------------
 org $308040 ; PC 0x180040
 db #$01 ; PreopenCurtains
 ;--------------------------------------------------------------------------------
@@ -12,7 +13,7 @@ db #$00 ; ProgressiveSwordLimit
 db #$47 ; ProgressiveSwordReplacement ($47 = 20 Rupees)
 ;--------------------------------------------------------------------------------
 org $30802F ; PC 0x18002F
-db #$03 ; SpecialBombs
+db #$01 ; SpecialBombs
 ;--------------------------------------------------------------------------------
 org $308028 ; PC 0x180028
 db #$B5 ; FairySword
@@ -32,5 +33,25 @@ db #$B5 ; SmithSword
 org $30804D
 db #$22 ; always infinite bombs
 ;--------------------------------------------------------------------------------
-org $30808B
-db #$01 ; pyramid hole open
+org $068051
+db #$DB ; fish merchant 10-bomb drop -> red rupee
+;--------------------------------------------------------------------------------
+org $0681F8
+db #$D9 ; pot single bombs -> green rupees
+org $0681FD
+db #$D9
+org $068224
+db #$04 ; width offset for pot bombs
+org $068229
+db #$04
+org $09CC4A
+db #$D9 ; bonk rocks in dark graveyard bomb -> green rupee
+;--------------------------------------------------------------------------------
+org $01EDA7
+db #$35 ; DW chest game -> blue rupee
+;--------------------------------------------------------------------------------
+org $1DCB54
+LDA #$00 : NOP #2 ; thief doesn't steal bombs
+org $1E8D80
+LDA #$00 : NOP #2 ; pikit doesn't steal bombs
+;--------------------------------------------------------------------------------

@@ -55,3 +55,10 @@ LDA #$00 : NOP #2 ; thief doesn't steal bombs
 org $1E8D80
 LDA #$00 : NOP #2 ; pikit doesn't steal bombs
 ;--------------------------------------------------------------------------------
+org $30B04F
+if defined("starting_bombs")
+	db #!starting_bombs
+else
+	db #$00
+endif
+;--------------------------------------------------------------------------------

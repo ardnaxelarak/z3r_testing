@@ -145,3 +145,57 @@ db $F8, $AD, $B2, $B7, $B0, $BE, $BC, $C7, $FB, $FF
 org $1CB84E
 db $AE, $C1, $B9, $B5, $B8, $BC, $B2, $BF, $AE, $BC, $C7, $FF, $FF, $FF
 ;--------------------------------------------------------------------------------
+org $30986C
+db $1B, $28, $26, $1B, $2C
+org $309875
+db $9F, $4A, $43, $3C, $3C, $47
+;--------------------------------------------------------------------------------
+; change stats in credits
+table "creditscharmapbighi.txt"
+org $23803E
+db "FIRST BOMBS                 "
+
+table "creditscharmapbiglo.txt"
+org $23805C
+db "FIRST BOMBS                 "
+
+table "creditscharmapbighi.txt"
+org $23807A
+db "BOMBLESS                 /13"
+
+table "creditscharmapbiglo.txt"
+org $238098
+db "BOMBLESS                 /13"
+
+table "creditscharmapbighi.txt"
+org $2380B6
+db "FIGHTER'S BOMBS          /13"
+
+table "creditscharmapbiglo.txt"
+org $2380D4
+db "FIGHTER'S BOMBS          /13"
+
+table "creditscharmapbighi.txt"
+org $2380F2
+db "MASTER BOMBS             /13"
+
+table "creditscharmapbiglo.txt"
+org $238110
+db "MASTER BOMBS             /13"
+
+table "creditscharmapbighi.txt"
+org $23812E
+db "TEMPERED BOMBS           /13"
+
+table "creditscharmapbiglo.txt"
+org $23814C
+db "TEMPERED BOMBS           /13"
+
+table "creditscharmapbighi.txt"
+org $23816A
+db "GOLD BOMBS               /13"
+
+table "creditscharmapbiglo.txt"
+org $238188
+db "GOLD BOMBS               /13"
+;--------------------------------------------------------------------------------

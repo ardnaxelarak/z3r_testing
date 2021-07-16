@@ -145,6 +145,7 @@ db $F8, $AD, $B2, $B7, $B0, $BE, $BC, $C7, $FB, $FF
 org $1CB84E
 db $AE, $C1, $B9, $B5, $B8, $BC, $B2, $BF, $AE, $BC, $C7, $FF, $FF, $FF
 ;--------------------------------------------------------------------------------
+; and the master bombs sleep again
 org $30986C
 db $1B, $28, $26, $1B, $2C
 org $309875

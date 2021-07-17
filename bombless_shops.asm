@@ -29,7 +29,7 @@ db $05, $04, $32, $00, $00, $FF, $00, $00 ; blue shield
 db $06, $2E, $96, $00, $00, $FF, $00, $00 ; red potion refill
 db $06, $04, $32, $00, $00, $FF, $00, $00 ; blue shield
 db $07, $2E, $96, $00, $00, $FF, $00, $00 ; red potion refill
-db $07, $04, $32, $00, $00, $FF, $00, $00 ; blue shield
+db $07, $42, $0A, $00, $00, $FF, $00, $00 ; small heart
 db $08, $2E, $96, $00, $00, $FF, $00, $00 ; red potion refill
 db $08, $42, $0A, $00, $00, $FF, $00, $00 ; small heart
 db $09, $2E, $96, $00, $00, $FF, $00, $00 ; red potion refill

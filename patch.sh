@@ -28,7 +28,7 @@ for var in "$@"; do
 		PATCHES+=($var)
 	else
 		echo file \"$var\" not found
-		echo "USAGE: patch.sh [asm_file, ...]"
+		echo "USAGE: patch.sh <options> [asm_file, ...]"
 		exit 1
 	fi
 done

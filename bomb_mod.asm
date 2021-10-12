@@ -35,6 +35,9 @@ db #$B3 ; L3 Bombs at Smith
 
 org $308028 ; PC 0x180028
 db #$B4 ; L4 Bombs at Fairy
+
+org $01E980 ; PC 0x00E980
+db #$B4 ; L4 Bombs at Fairy chest
 ;--------------------------------------------------------------------------------
 ; remove uncle shield
 org $0DD253

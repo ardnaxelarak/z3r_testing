@@ -6,7 +6,7 @@ else
 	COMMAND=../z3randomizer/asar
 fi
 
-PATCHES=("sprite.asm" "quickswap.asm" "flashing.asm" "music.asm" "aga_fix.asm" "menuspeed" "heartbeep" "heartcolor")
+PATCHES=("sprite.asm" "quickswap.asm" "flashing.asm" "music.asm" "aga_fix.asm" "fairies.asm" "menuspeed.asm" "heartbeep.asm" "heartcolor.asm")
 DEFINES=()
 for var in "$@"; do
 	if [[ $var = --help ]]; then
@@ -17,7 +17,7 @@ for var in "$@"; do
 		echo "\t--flashing=VALUE    \tturn on/off flashing (0 = flashing disabled, 1 = flashing not disabled)"
 		echo "\t--music=VALUE       \tturn on/off background music (1 = background music, 0 = no background music)"
 		echo "\t--menuspeed=VALUE   \tchange menu speed (instant, fast, normal, slow)"
-		echo "\t--heartbeep=VALUE   \tchange speed of low health beep (off, quarter, half, noraml, double)"
+		echo "\t--heartbeep=VALUE   \tchange speed of low health beep (off, quarter, half, normal, double)"
 		echo "\t--heartcolor=VALUE  \tchange color of in-game hearts (red, green, yellow, blue)"
 		exit 1
 	elif [[ $var = --* ]]; then

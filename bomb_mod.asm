@@ -141,12 +141,14 @@ org $1CA1B2
 db $AB, $B8, $B6, $AB, $BC
 ;--------------------------------------------------------------------------------
 ; ganon dialog
+table "dialogcharmap.txt"
 org $1CB7E3
-db $B7, $B8, $FF, $AE, $C1, $B9, $B5, $B8, $BC, $B2, $BF, $AE, $BC, $C6
-db $F8, $AD, $B2, $B7, $B0, $BE, $BC, $C7, $FB, $FF
+db "NO EXPLOSIVES?"
+db $F8
+db "DINGUS!  "
 
 org $1CB84E
-db $AE, $C1, $B9, $B5, $B8, $BC, $B2, $BF, $AE, $BC, $C7, $FF, $FF, $FF
+db "EXPLOSIVES!   "
 ;--------------------------------------------------------------------------------
 ; and the master bombs sleep again
 org $30986C

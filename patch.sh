@@ -6,7 +6,7 @@ else
 	COMMAND=../z3randomizer/asar
 fi
 
-PATCHES=("sprite.asm" "quickswap.asm" "flashing.asm" "music.asm" "aga_fix.asm" "fairies.asm" "menuspeed.asm" "heartbeep.asm" "heartcolor.asm")
+PATCHES=("sprite.asm" "quickswap.asm" "flashing.asm" "music.asm" "aga_fix.asm" "fairies.asm" "byrna.asm" "menuspeed.asm" "heartbeep.asm" "heartcolor.asm")
 DEFINES=()
 for var in "$@"; do
 	if [[ $var = --help ]]; then

@@ -1,7 +1,12 @@
 incsrc bomb_mod.asm
 incsrc bombless_shops.asm
 incsrc standard.asm
+incsrc unseeded_rng.asm
 
+;--------------------------------------------------------------------------------
+; 300 rupees in brewery
+org $01E9EC
+db $46
 ;--------------------------------------------------------------------------------
 ; opening intro text change
 table "dialogcharmap.txt"

@@ -130,81 +130,13 @@ else
 	db $00
 endif
 ;--------------------------------------------------------------------------------
-; text fixes to refer to master bombs instead of master sword
-org $1C8317
-db $FF
-org $1C8320
-db $AB, $B8, $B6, $AB, $BC
-org $1CA168
-db $AB, $B8, $B6, $AB, $BC
-org $1CA1B2
-db $AB, $B8, $B6, $AB, $BC
-;--------------------------------------------------------------------------------
-; ganon dialog
-table "dialogcharmap.txt"
-org $1CB7E3
-db "NO EXPLOSIVES?"
-db $F8
-db "DINGUS!  "
-
-org $1CB84E
-db "EXPLOSIVES!   "
-;--------------------------------------------------------------------------------
-; and the master bombs sleep again
-org $30986C
-db $1B, $28, $26, $1B, $2C
-org $309875
-db $9F, $4A, $43, $3C, $3C, $47
-;--------------------------------------------------------------------------------
-; change stats in credits
-table "creditscharmapbighi.txt"
-org $23803E
-db "FIRST BOMBS                 "
-
-table "creditscharmapbiglo.txt"
-org $23805C
-db "FIRST BOMBS                 "
-
-table "creditscharmapbighi.txt"
-org $23807A
-db "BOMBLESS                 /13"
-
-table "creditscharmapbiglo.txt"
-org $238098
-db "BOMBLESS                 /13"
-
-table "creditscharmapbighi.txt"
-org $2380B6
-db "FIGHTER'S BOMBS          /13"
-
-table "creditscharmapbiglo.txt"
-org $2380D4
-db "FIGHTER'S BOMBS          /13"
-
-table "creditscharmapbighi.txt"
-org $2380F2
-db "MASTER BOMBS             /13"
-
-table "creditscharmapbiglo.txt"
-org $238110
-db "MASTER BOMBS             /13"
-
-table "creditscharmapbighi.txt"
-org $23812E
-db "TEMPERED BOMBS           /13"
-
-table "creditscharmapbiglo.txt"
-org $23814C
-db "TEMPERED BOMBS           /13"
-
-table "creditscharmapbighi.txt"
-org $23816A
-db "GOLD BOMBS               /13"
-
-table "creditscharmapbiglo.txt"
-org $238188
-db "GOLD BOMBS               /13"
-;--------------------------------------------------------------------------------
-org $308215 ; PC 0x180215
-db $03, $03, $03, $03, $03 ; SeedHash -- BOMBS
+; gold bombs palette hack
+; org $1BEBB4
+; db $0A
+org $1BD634
+dw $02BC
+org $1BD648
+dw $4F5F
+org $1BD658
+dw $4F5F
 ;--------------------------------------------------------------------------------

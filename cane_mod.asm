@@ -1,4 +1,4 @@
-!cane ?= "blue"
+!cane ?= "both"
 ;--------------------------------------------------------------------------------
 org $308040 ; PC 0x180040
 db $01 ; PreopenCurtains
@@ -18,9 +18,11 @@ if stringsequal("!cane", "blue")
   db $03 ; SpecialBlueCane
 elseif stringsequal("!cane", "red")
   db $04 ; SpecialRedCane
+elseif stringsequal("!cane", "both")
+  db $05 ; SpecialBothCanes
 endif
 ;--------------------------------------------------------------------------------
-if stringsequal("!cane", "blue")
+if stringsequal("!cane", "blue") || stringsequal("!cane", "both")
   org $08DC42 ; PC 0x45C42 - byrna magic usage (recurring)
   db $00, $00, $00 ; normal, 1/2, 1/4 magic
   org $08DCC7
@@ -34,7 +36,10 @@ if stringsequal("!cane", "blue")
   db $EA, $EA
   org $07B0AE
   db $81
-elseif stringsequal("!cane", "red")
+
+  org $30816B ; PC 0x18016B - byrna magic usage (hard-mode excluded zones)
+  db $00, $00, $00 ; normal, 1/2, 1/4 magic
+elseif stringsequal("!cane", "red") || stringsequal("!cane", "both")
   org $07B07C ; PC 0x3B09F - somaria magic usage
   db $00, $00, $00 ; normal, 1/2, 1/4 magic
   db $00, $00, $00 ; normal, 1/2, 1/4 magic
@@ -74,6 +79,21 @@ elseif stringsequal("!cane", "red")
   db $DC, $24, $DD, $24, $EC, $24, $19, $24
   db $DC, $24, $DD, $24, $EC, $24, $1A, $24
   db $DC, $24, $DD, $24, $EC, $24, $1B, $24
+elseif stringsequal("!cane", "both")
+  org $0DFC51
+  db $F5, $20, $F5, $20, $F5, $20, $F5, $20
+  db $DC, $28, $DD, $28, $EC, $28, $17, $28
+  db $DC, $28, $DD, $28, $EC, $28, $18, $28
+  db $DC, $28, $DD, $28, $EC, $28, $19, $28
+  db $DC, $28, $DD, $28, $EC, $28, $1A, $28
+  db $DC, $28, $DD, $28, $EC, $28, $1B, $28
+  org $0DFC81
+  db $F5, $20, $F5, $20, $F5, $20, $F5, $20
+  db $DC, $28, $DD, $28, $EC, $28, $17, $28
+  db $DC, $28, $DD, $28, $EC, $28, $18, $28
+  db $DC, $28, $DD, $28, $EC, $28, $19, $28
+  db $DC, $28, $DD, $28, $EC, $28, $1A, $28
+  db $DC, $28, $DD, $28, $EC, $28, $1B, $28
 endif
 ;--------------------------------------------------------------------------------
 org $05DF45 ; PC 0x2DF45
@@ -144,6 +164,8 @@ db $00, $00, $E4, $FF, $08, $0E
 org $30B04F
 if defined("starting_cane")
 	db !starting_cane
+elseif stringsequal("!cane", "both")
+	db $01
 else
 	db $00
 endif

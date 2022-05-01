@@ -8,6 +8,11 @@ db #$01 ; PreopenCurtains
 org $308041 ; PC 0x180041
 db #$02 ; AllowSwordlessMedallionUse (always)
 ;--------------------------------------------------------------------------------
+org $1EB99E
+db #$00 ; arrghus poofs should not become invulnerable
+org $0DB3E6
+db #$0D ; arrghus poofs should not start invulnerable
+;--------------------------------------------------------------------------------
 org $308090 ; PC 0x180090 - 0x180097
 db #$00 ; ProgressiveSwordLimit
 db #$47 ; ProgressiveSwordReplacement ($47 = 20 Rupees)

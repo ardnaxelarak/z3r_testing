@@ -14,6 +14,10 @@ org $0DB3E6
 db #$0D ; arrghus poofs should not start invulnerable
 org $0DB123
 db #$00 ; Kholdstare shell targetable by bees
+org $31CE61
+db $00, $00 ; fire sidenexx immune to swords
+org $31CE69
+db $00, $00 ; ice sidenexx immune to swords
 ;--------------------------------------------------------------------------------
 org $308090 ; PC 0x180090 - 0x180097
 db #$00 ; ProgressiveSwordLimit

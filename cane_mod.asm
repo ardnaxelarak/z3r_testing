@@ -97,30 +97,30 @@ elseif stringsequal("!cane", "both")
 endif
 ;--------------------------------------------------------------------------------
 org $05DF45 ; PC 0x2DF45
-; db $B7 ; L1 Cane at Uncle
+; db $B7 ; Progressive Cane at Uncle
 db $BC
 
 org $01E971 ; PC 0xE971
 db $04 ; L1 shield at Secret Passage
 
 org $0589B0 ; PC 0x289B0 ; sprite_master_sword.asm : 179
-; db $B8 ; L2 Cane on Pedestal
+; db $B7 ; Progressive Cane on Pedestal
 db $BC
 
 org $30802A ; PC 0x18002A
-; db $B9 ; L3 Cane at Smith
+; db $B7 ; Progressive Cane at Smith
 db $BC
 
 org $06B55C ; PC 0x3355C ; sprite_smithy_bros.asm : 634
-; db $B9 ; L3 Cane at Smith
+; db $B7 ; Progressive Cane at Smith
 db $BC
 
 org $308028 ; PC 0x180028
-; db $BA ; L4 Cane at Fairy
+; db $B7 ; Progressive Cane at Fairy
 db $BC
 
 org $01E980 ; PC 0x00E980
-; db $BA ; L4 Cane at Fairy chest
+; db $B7 ; Progressive Cane at Fairy chest
 db $BC
 ;--------------------------------------------------------------------------------
 ; remove uncle shield

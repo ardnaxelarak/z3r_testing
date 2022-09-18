@@ -19,25 +19,25 @@ org $308034
 db #00 ; starting max bombs = 0
 ;--------------------------------------------------------------------------------
 org $05DF45 ; PC 0x2DF45
-db #$B1 ; L1 Bombs at Uncle
+db #$B6 ; Progressive Bomb at Uncle
 
 org $01E971 ; PC 0xE971
 db #$04 ; L1 shield at Secret Passage
 
 org $0589B0 ; PC 0x289B0 ; sprite_master_sword.asm : 179
-db #$B2 ; L2 Bombs on Pedestal
+db #$B6 ; Progressive Bomb on Pedestal
 
 org $30802A ; PC 0x18002A
-db #$B3 ; L3 Bombs at Smith
+db #$B6 ; Progressive Bomb at Smith
 
 org $06B55C ; PC 0x3355C ; sprite_smithy_bros.asm : 634
-db #$B3 ; L3 Bombs at Smith
+db #$B6 ; Progressive Bomb at Smith
 
 org $308028 ; PC 0x180028
-db #$B4 ; L4 Bombs at Fairy
+db #$B6 ; Progressive Bomb at Fairy
 
 org $01E980 ; PC 0x00E980
-db #$B4 ; L4 Bombs at Fairy chest
+db #$B6 ; Progressive Bomb at Fairy chest
 ;--------------------------------------------------------------------------------
 ; remove uncle shield
 org $0DD253
